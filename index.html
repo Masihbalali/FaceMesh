@@ -44,20 +44,41 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   </head>
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">FaceMesh App</a>
+    </nav>
+    <div class="container-fluid">
+      <section id="demos" class="invisible">
 
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="detectOnClick" style="width: 100%;">
+            <img src="./maryammirzakhani.jpg" id="output_image"  width="70%" crossorigin="anonymous" title="Click to get detection!" />
+            <input type="file" accept="image/*"  onchange="preview_image(event)">
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="blend-shapes details-custom">
+            <h2>Content</h2>
+            <hr>
+            <ul class="blend-shapes-list" id="image-blend-shapes"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    </div>
+<!-- 
   <section id="demos" class="invisible">
-    <h2>FaceMesh!</h2>
-    <p><b>Click on an image below</b> to see the key landmarks of the face.</p>
 
     <div class="detectOnClick">
       <img src="./portrait.jpg" id="output_image" class="img-thumbnail img-fluid" width="70%" crossorigin="anonymous" title="Click to get detection!" />
       <input type="file" accept="image/*"  onchange="preview_image(event)">
     </div>
-    <div class="blend-shapes">
+    <div class="blend-shapes details-custom">
       <ul class="blend-shapes-list" id="image-blend-shapes"></ul>
     </div>
-  </section>
+  </section> -->
     
 
     <!-- Video section -->

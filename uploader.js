@@ -9,8 +9,6 @@ function preview_image(event) {
 
 
 
-
-
   
 
 // function preview_image(event) {
