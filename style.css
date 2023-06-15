@@ -4,9 +4,11 @@
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
-  color: #3d3d3d;
+  color: #fff;
   --mdc-theme-primary: #007f8b;
   --mdc-theme-on-primary: #f1f3f4;
+  background: rgb(153,0,255);
+background: linear-gradient(41deg, rgba(153,0,255,1) 0%, rgba(246,0,255,1) 34%, rgba(255,0,187,1) 66%, rgba(255,0,0,1) 100%);
 }
 
 h1 {
@@ -123,3 +125,4 @@ footer {
   align-items: center;
   background-color: #007f8b;
 }
+
