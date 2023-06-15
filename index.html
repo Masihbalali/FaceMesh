@@ -54,7 +54,10 @@
         <div class="col-sm-12 col-md-6 col-lg-6">
           <div class="detectOnClick" style="width: 100%;">
             <img src="./maryammirzakhani.jpg" id="output_image"  width="70%" crossorigin="anonymous" title="Click to get detection!" />
-            <input type="file" accept="image/*"  onchange="preview_image(event)">
+              <!-- <label for="file-upload" class="custom-file-upload">Custom Upload</label> -->
+              <label for="file-upload" id="upload" class="upload-btn" >Upload</label>
+              <input type="file" id="file-upload" accept="image/*" class="custom-file-upload"  onchange="preview_image(event)">
+              
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">

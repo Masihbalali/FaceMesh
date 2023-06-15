@@ -1,15 +1,91 @@
+// const durtime = 900000000000000000;
+
+// function preview_image(event) {
+//     var reader = new FileReader();
+//     reader.onload = function(){
+//       var output = document.getElementById('output_image');
+//       output.src = reader.result;
+//     }
+//     reader.readAsDataURL(event.target.files[0]);
+//     console.log("image uploaded successfully");
+//     durtime = 0;
+//   }
+
+
+// document.addEventListener("DOMContentLoaded",function(){
+// 	let btn = this.getElementById("upload");
+
+// 	if (btn) {
+// 		btn.addEventListener("click",function(){
+// 			let cl = this.classList,
+// 				r = "upload-btn--running",
+// 				d = "upload-btn--done",
+// 				dur = durtime;
+
+// 			if (!cl.contains(r) && !cl.contains(d) && !this.disabled) {
+// 				cl.add(r);
+// 				this.disabled = true;
+// 				this.innerHTML = "Uploading…";
+
+// 				setTimeout(() => {
+// 					cl.remove(r);
+// 					cl.add(d);
+// 					this.innerHTML = "Done!";
+
+// 					setTimeout(() => {
+// 						cl.remove(d);
+// 						this.disabled = false;
+// 						this.innerHTML = "Upload";
+// 					},1500);
+// 				},dur);
+// 			}
+// 		});
+// 	}
+// });
+let durtime = 900000000000000000;
+
 function preview_image(event) {
-    var reader = new FileReader();
-    reader.onload = function(){
-      var output = document.getElementById('output_image');
-      output.src = reader.result;
-    }
-    reader.readAsDataURL(event.target.files[0]);
+  var reader = new FileReader();
+  reader.onload = function(){
+    var output = document.getElementById('output_image');
+    output.src = reader.result;
   }
+  reader.readAsDataURL(event.target.files[0]);
+  console.log("image uploaded successfully");
+  // Assign a new value to durtime
+  durtime = 0;
+}
 
+document.addEventListener("DOMContentLoaded",function(){
+  let btn = document.getElementById("upload");
 
+  if (btn) {
+    btn.addEventListener("click",function(){
+      let cl = this.classList,
+        r = "upload-btn--running",
+        d = "upload-btn--done",
+        dur = durtime;
 
-  
+      if (!cl.contains(r) && !cl.contains(d) && !this.disabled) {
+        cl.add(r);
+        this.disabled = true;
+        this.innerHTML = "Uploading…";
+
+        setTimeout(() => {
+          cl.remove(r);
+          cl.add(d);
+          this.innerHTML = "Done!";
+
+          setTimeout(() => {
+            cl.remove(d);
+            this.disabled = false;
+            this.innerHTML = "Upload";
+          },1500);
+        },dur);
+      }
+    });
+  }
+});
 
 // function preview_image(event) {
 //     // Clear the image
