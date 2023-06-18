@@ -233,6 +233,8 @@ input[type="file"] {
 	-webkit-tap-highlight-color: #0000;
 	-webkit-appearance: none;
 	appearance: none;
+  margin-top: 10px;
+  
 }
 .upload-btn:disabled {
 	cursor: not-allowed;

@@ -47,31 +47,43 @@
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">FaceMesh App</a>
     </nav>
+
     <div class="container-fluid">
       <section id="demos" class="invisible">
-
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="detectOnClick" style="width: 100%;">
-            <img src="./maryammirzakhani.jpg" id="output_image"  width="70%" crossorigin="anonymous" title="Click to get detection!" />
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="detectOnClick" style="width: 100%">
+              <img
+                src="./maryammirzakhani.jpg"
+                id="output_image"
+                width="70%"
+                crossorigin="anonymous"
+                title="Click to get detection!"
+              />
               <!-- <label for="file-upload" class="custom-file-upload">Custom Upload</label> -->
-              <label for="file-upload" id="upload" class="upload-btn" >Upload</label>
-              <input type="file" id="file-upload" accept="image/*" class="custom-file-upload"  onchange="preview_image(event)">
-              
+              <label for="file-upload" id="upload" class="upload-btn"
+                >Upload</label
+              >
+              <input
+                type="file"
+                id="file-upload"
+                accept="image/*"
+                class="custom-file-upload"
+                onchange="preview_image(event)"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="blend-shapes details-custom">
+              <h2>Result</h2>
+              <hr />
+              <ul class="blend-shapes-list" id="image-blend-shapes"></ul>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="blend-shapes details-custom">
-            <h2>Content</h2>
-            <hr>
-            <ul class="blend-shapes-list" id="image-blend-shapes"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
+      </section>
     </div>
-<!-- 
+    <!-- 
   <section id="demos" class="invisible">
 
     <div class="detectOnClick">
@@ -82,7 +94,6 @@
       <ul class="blend-shapes-list" id="image-blend-shapes"></ul>
     </div>
   </section> -->
-    
 
     <!-- Video section -->
     <!-- <h2>Demo: Webcam continuous face landmarks detection</h2>
@@ -105,7 +116,7 @@
 
     <script type="module">
       import vision from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0";
-
+      
       const { FaceLandmarker, FilesetResolver, DrawingUtils } = vision;
       const demosSection = document.getElementById("demos");
       const imageBlendShapes = document.getElementById("image-blend-shapes");
@@ -398,6 +409,7 @@
 
         el.innerHTML = htmlMaker;
       }
+  
     </script>
   </body>
 </html>
